@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe Game</title>
+    <link rel="shortcut icon" href="Images/icon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/overlay.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <!-- navigation bar contains only icon and name -->
+    <nav class="navbar navbar-expand-lg bg-black">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="./index.html">
+                <img src="Images/icon.ico" alt="icon of tic tac toe game">
+                <b class=" text-white">Tic Tac Toe</b>
+            </a>
+            <span class="navbar-text text-white pe-3">Made With <i class="fa fa-heart" style="color:red"></i> by
+                Prathamesh Dhande</span>
+        </div>
+    </nav>
+
+    <div class="container-fluid" id="mainwindow">
+        <!-- question window just asks for the playername and choosing the side for player1 -->
+        <div class="questionwindow" id="askquestion">
+            <div class="formdetails">
+                <div class="form-floating">
+                    <input type="email" class="form-control player" id="player1name" placeholder="Player 1">
+                    <label for="player1name">Enter Player 1 Name : </label>
+                </div>
+                <div class="form-floating">
+                    <input type="text" class="form-control player" id="player2name" placeholder="Player 2">
+                    <label for="player2name">Enter Player 2 Name : </label>
+                </div>
+            </div>
+            <div class="ask mt-5">
+                For Player 1 Choose the Side :
+                <div class="d-flex flex-wrap flex-row gap-3 justify-content-center">
+                    <button type="button" class="choosebtn" id="xbtn">X</button>
+                    <button type="button" class="choosebtn" id="obtn">O</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="gamewindow" id="gmwindow">
+            <div class="boxes">
+                <button class="tile"></button>
+                <button class="tile"></button>
+                <button class="tile"></button>
+                <button class="tile"></button>
+                <button class="tile"></button>
+                <button class="tile"></button>
+                <button class="tile"></button>
+                <button class="tile"></button>
+                <button class="tile"></button>
+            </div>
+            <div class="detailwindow">
+                <div class="heading">
+                    DETAILS
+                </div>
+                <div class="nameing mt-2">
+                    <div>Player 1 Name : </div>
+                    <div>Player 2 Name : </div>
+                </div>
+                <div class="choices mt-3">
+                    <div>Player 1 : </div>
+                    <div>Player 2 : </div>
+                </div>
+                <div class="turnshow text-center text-capitalize mt-2" id="turnshower">
+                </div>
+                <div class="gmbtn mt-3 text-center">
+                    <button type="button" id="restrt" onclick="location.reload()">Restart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="overlay">
+        <div class="overlay-header">
+        </div>
+        <div class="overlay-body">
+        </div>
+        <button type="button" class="overlay-btn btn btn-primary" id="playagain">Play Again</button>
+    </div>
+    <div class="backchanger"></div>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/overlay.js"></script>
+</body>
+
+</html>
