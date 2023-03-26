@@ -125,4 +125,18 @@
     .ask {
         font-size: 20px;
     }
+
+    .choosebtn {
+        height: 80px;
+        font-size: 30px;
+        width: 80px;
+    }
+
+    .choosebtn:hover {
+        background-color: chocolate;
+        color: white;
+        font-size: 50px;
+        border: 4px solid blueviolet;
+        transition: font-size 0.2s ease-in-out;
+    }
 }
